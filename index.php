@@ -67,6 +67,16 @@
         };
 
         echo min([1,2]);
+        $age = 50;
+
+        function Change(){
+            global $age;
+            $age = 20;
+        }
+
+        echo $age;
+        Change();
+        echo $age;
     ?>
 </body>
 </html>
