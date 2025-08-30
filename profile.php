@@ -24,16 +24,29 @@ if (isset($_SESSION['user'])) {
 
     <a href="/php-mysql-training/auth/logout.php" class="rounded-md bg-indigo-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Logout</a>
 
-    <?php $user = $_SESSION["user"]; ?>
+    <?php /* $user = $_SESSION["user"]; */ ?>
 
-    <ul>
+    <!-- <ul>
         <li>
-            Full Name: <?php echo $user["fullName"]; ?>
+            Full Name: <?php /* echo $user["fullName"]; */ ?>
         </li>
         <li>
-            Email: <?php echo $user["email"]; ?>
+            Email: <?php /* echo $user["email"]; */ ?>
         </li>
-    </ul>
+    </ul> -->
+
+    <?php
+    include_once "./oop/Profile.php";
+
+    $profile = new Profile("this is a parameter");
+
+    $data = $profile->getUserInfo();
+
+    echo "<br>";
+    echo $data->username;
+    echo "<br>";
+    echo $data->email;
+    ?>
 </body>
 
 </html>

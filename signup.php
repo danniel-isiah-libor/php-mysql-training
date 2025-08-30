@@ -25,7 +25,7 @@
         </div>
 
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form action="/php-mysql-training/auth/register.php" method="POST" class="space-y-6">
+            <form action="/php-mysql-training/auth/Register.php" method="POST" class="space-y-6">
                 <div>
                     <label for="full_name" class="block text-sm/6 font-medium text-gray-100">Full Name</label>
                     <div class="mt-2">
