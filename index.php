@@ -145,6 +145,88 @@
 
     // echo "<br>";
     // echo __DIR__ . "/payroll.pdf";
+
+    // $status = null;
+
+    // switch ($status) {
+    //     case "active":
+    //         echo "User is active!";
+    //         break;
+
+    //     case "deactivated":
+    //         echo "User is deactivated";
+    //         break;
+
+    //     default:
+    //         echo "No user found!";
+    //         break;
+    // }
+
+    // if ($status === "active") {
+    //     echo "User is active!";
+    // } else if ($status === "deactivated") {
+    //     echo "User is deactivated";
+    // } else {
+    //     echo "No user found!";
+    // }
+
+    function getStatusMessage($status)
+    {
+        switch ($status) {
+            case "active":
+                echo "User is active!";
+                break;
+
+            case "deactivated":
+                echo "User is deactivated";
+                break;
+
+            default:
+                echo "No user found!";
+                break;
+        }
+    }
+
+    /**
+     *  Compute total grade for 1st and 2nd semester.
+     * @param float $sem1
+     * @param float $sem2
+     * @return float $totalGrade
+     */
+    function getTotalGrade(?float $sem1 = 0, ?float $sem2 = 0, ?float $sem3 = 0): float
+    {
+        $total = $sem1 + $sem2 + $sem3;
+
+        return $total;
+    }
+
+    $status = "active";
+
+    getStatusMessage($status);
+
+    echo "<br>";
+
+    $totalGrade = getTotalGrade(sem1: 95.50, sem3: 80.68);
+    echo $totalGrade;
+
+    echo "<br>";
+
+    $age = 50;
+
+    function getUserAge()
+    {
+        static $age = 20;
+        echo $age . "<br>";
+        $age++;
+    }
+
+    echo $age;
+    echo "<br>";
+    getUserAge(); // 20
+    getUserAge(); // 21
+    getUserAge(); // 22
+
+    throw new Exception("this is error");
     ?>
 
 </body>
