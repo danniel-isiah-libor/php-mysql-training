@@ -1,7 +1,25 @@
 <?php
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    header("Location: /php-mysql-training/signin.php");
+    exit();
+}
+
 session_start();
 
 $form = $_POST; // array
+
+foreach ($form as $key => $value) {
+    $form[$key] = filterData($value);
+}
+
+function filterData($data)
+{
+    $data = htmlspecialchars(trim($data));
+    $data = trim($data);
+    $data = stripslashes($data);
+
+    return $data;
+}
 
 $fullName = $form['fullName'];
 $email = $form['email'];

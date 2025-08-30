@@ -1,4 +1,9 @@
 <?php
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    header("Location: /php-mysql-training/signin.php");
+    exit();
+}
+
 session_start();
 
 $form = $_POST; // array
