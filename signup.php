@@ -29,7 +29,7 @@
                 <div>
                     <label for="full_name" class="block text-sm/6 font-medium text-gray-100">Full Name</label>
                     <div class="mt-2">
-                        <input id="full_name" type="text" name="fullName" required autocomplete="name" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                        <input required id="full_name" type="text" name="fullName" required autocomplete="name" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
 
                         <?php if (isset($_SESSION['errors']['fullName'])): ?>
                             <p class="mt-1 text-sm text-red-500">

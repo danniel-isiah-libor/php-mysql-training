@@ -25,7 +25,7 @@
         </div>
 
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form action="#" method="POST" class="space-y-6">
+            <form action="/php-mysql-training/auth/login.php" method="POST" class="space-y-6">
                 <?php include_once 'email-field.php'; ?>
 
                 <?php include_once 'password-field.php'; ?>
