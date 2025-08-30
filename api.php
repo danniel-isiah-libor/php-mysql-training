@@ -11,6 +11,7 @@ $data = [
     'username' => 'testuser'
 ];
 
+// return json format
 echo json_encode($data);
 
 exit();
