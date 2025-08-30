@@ -33,23 +33,24 @@
         //     <li>Position: ".$positio n."</li>
         //     <li>Tenure: ".$tenure."</li>
         //     </ul>";
-        $workExperiences = [
-            [
-                "companyName" => "Dargon Qeust",
-                "position" => "Lead Player",
-                "tenure" => 3
-            ],
-            [
-                "companyName" => "World of Majik",
-                "position" => "Co-Developer",
-                "tenure" => 1
-            ],
-            [
-                "companyName" => "Dungeons and Determination",
-                "position" => "CEO",
-                "tenure" => 2
-            ]
-        ];
+        
+        // $workExperiences = [
+        //     [
+        //         "companyName" => "Dargon Qeust",
+        //         "position" => "Lead Player",
+        //         "tenure" => 3
+        //     ],
+        //     [
+        //         "companyName" => "World of Majik",
+        //         "position" => "Co-Developer",
+        //         "tenure" => 1
+        //     ],
+        //     [
+        //         "companyName" => "Dungeons and Determination",
+        //         "position" => "CEO",
+        //         "tenure" => 2
+        //     ]
+        // ];
         // echo $workExperiences[0]["position"];
         // for($x=0;$x<count($workExperiences);$x++){
         //     echo "<ul>
@@ -58,25 +59,27 @@
         //     <li>Tenure: ".$workExperiences[$x]["tenure"]."</li>
         //     </ul>";
         // }; 
-        foreach($workExperiences as $x){
-            echo "<ul>
-            <li>Company Name: ".$x["companyName"]."</li>
-            <li>Position: ".$x["position"]."</li>
-            <li>Tenure: ".$x["tenure"]."</li>
-            </ul>";
-        };
+        // foreach($workExperiences as $x){
+        //     echo "<ul>
+        //     <li>Company Name: ".$x["companyName"]."</li>
+        //     <li>Position: ".$x["position"]."</li>
+        //     <li>Tenure: ".$x["tenure"]."</li>
+        //     </ul>";
+        // };
 
-        echo min([1,2]);
-        $age = 50;
+        // echo min([1,2]);
+        // $age = 50;
 
-        function Change(){
-            global $age;
-            $age = 20;
-        }
+        // function Change(){
+        //     global $age;
+        //     $age = 20;
+        // }
 
-        echo $age;
-        Change();
-        echo $age;
+        // echo $age;
+        // Change();
+        // echo $age;
+
+        // throw new Exception("tis an error"); 
     ?>
 </body>
 </html>
