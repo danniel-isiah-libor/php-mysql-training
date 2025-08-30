@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: /php-mysql-training/signin.php");
+    header("Location: /signin.php");
     exit();
 }
 
@@ -16,13 +16,13 @@ $errors = [];
 $user = $_SESSION["user"];
 
 if ($user["email"] === $email && $user["password"] === $password) {
-    header("Location: /php-mysql-training/profile.php");
+    header("Location: /profile.php");
 } else {
     $errors["email"] = "Invalid credentials";
 
     $_SESSION['errors'] = $errors;
 
-    header("Location: /php-mysql-training/signin.php");
+    header("Location: /signin.php");
 }
 
 die();
