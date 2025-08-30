@@ -10,7 +10,180 @@
 <?php
 //echo "Hello World";
 // echo "<h1 style='color: green'> HELLO WORLD </h1>";
-echo 20;
+// echo 20;
+
+// $cname = "BJMP MPC";
+// $position = "General Manager";
+// $tenure = "10";
+
+// echo "<ul>";
+// echo "<li>Company:" . $cname . "</li>";
+// echo "<li>Position:" . $position . "</li>";
+// echo "<li>Tenure:" . $tenure . "</li>";
+// echo "</ul>";
+
+
+$workExps = [
+    [
+        "companyName" => "ePLDT",
+        "position" => "CSR",
+        "tenure" => "1"
+    ],
+
+    [
+        "companyName" => "Ace Global",
+        "position" => "CSR",
+        "tenure" => "1"
+    
+    ],
+    [
+        "companyName" => "Sutherland",
+        "position" => "CFR",
+        "tenure" => "1"
+    ]
+
+];
+
+// for ($i = 0; $i < count ($workExps); $i++){
+//     echo $workExps[$i]["companyName"] . "<br>";
+// }
+
+
+while ($i < count($workExps)){
+    echo "<ul>";
+    echo "<li> Company: " . $workExps [$i]["companyName"] . 
+
+}
+
+ # this is a comment
+    // this is also a comment
+    // $color = "red";
+    // echo "My car is " . $color . "<br>";
+    // echo "My house is " . $COLOR . "<br>";
+    // echo "My boat is " . $coLOR . "<br>";
+
+    $name = "Danniel";
+    $email = "danniel@example.com";
+    $age = 20;
+
+    echo "<ul>";
+    echo "<li>Name: " . $name . "</li>";
+    echo "<li>Email: " . $email . "</li>";
+    echo "<li>Age: " . $age . "</li>";
+    echo "</ul>";
+
+    // company name
+    // position
+    // tenure
+    // $companyName = "Tech Solutions";
+    // $position = "Software Engineer";
+    // $tenure = 2;
+
+    // $companyName1 = "Tech Solutions";
+    // $position1 = "Software Engineer";
+    // $tenure1 = 2;
+
+    // echo "<ul>";
+    // echo "<li>Company: " . $companyName . "</li>";
+    // echo "<li>Position: " . $position . "</li>";
+    // echo "<li>Tenure: " . $tenure . " years</li>";
+    // echo "<br>";
+    // echo "<li>Company: " . $companyName1 . "</li>";
+    // echo "<li>Position: " . $position1 . "</li>";
+    // echo "<li>Tenure: " . $tenure1 . " years</li>";
+    // echo "</ul>";
+
+    $workExperiences = [
+        [
+            "companyName" => "Tech Solutions",
+            "position" => "Software Engineer",
+            "tenure" => 2
+        ],
+        [
+            "companyName" => "Web Innovations",
+            "position" => "Frontend Developer",
+            "tenure" => 1
+        ],
+        [
+            "companyName" => "Data Analytics Inc.",
+            "position" => "Data Analyst",
+            "tenure" => 3
+        ]
+    ];
+
+    // for ($i = 0; $i < count($workExperiences); $i++) {
+    //     echo $workExperiences[$i]["companyName"] . "<br>";
+    //     echo $workExperiences[$i]["position"] . "<br>";
+    //     echo $workExperiences[$i]["tenure"] . " years<br>";
+    // }
+
+    // foreach ($workExperiences as $experience) {
+    //     echo "<ul>";
+    //     echo "<li>Company: " . $experience["companyName"] . "</li>";
+    //     echo "<li>Position: " . $experience["position"] . "</li>";
+    //     echo "<li>Tenure: " . $experience["tenure"] . " years</li>";
+    //     echo "</ul>";
+    // }
+
+    // $i = 0;
+    // while ($i < count($workExperiences)) {
+    //     echo "<ul>";
+    //     echo "<li>Company: " . $workExperiences[$i]["companyName"] . "</li>";
+    //     echo "<li>Position: " . $workExperiences[$i]["position"] . "</li>";
+    //     echo "<li>Tenure: " . $workExperiences[$i]["tenure"] . " years</li>";
+    //     echo "</ul>";
+    //     $i++;
+    // }
+
+    // $i = 0;
+    // do {
+    //     echo "<ul>";
+    //     echo "<li>Company: " . $workExperiences[$i]["companyName"] . "</li>";
+    //     echo "<li>Position: " . $workExperiences[$i]["position"] . "</li>";
+    //     echo "<li>Tenure: " . $workExperiences[$i]["tenure"] . " years</li>";
+    //     echo "</ul>";
+    //     $i++;
+    // } while ($i < count($workExperiences));
+
+    // echo min([
+    //     [1],
+    //     [2],
+    //     [3],
+    //     [4],
+    //     [5]
+    // ]);
+    // echo '<br>';
+    // echo max([1, 2, 3, 4, 5]);
+
+    $array = [
+        [1],
+        [2],
+        [3],
+        [4],
+        [5]
+    ];
+    // $values = [];
+    // foreach ($array as $value) {
+    //     $values[] = $value[0];
+    // }
+    // echo min($values);
+    // echo '<br>';
+    // echo max($values);
+
+    // this is a constant variable
+    // define("USERNAME", "danniel02");
+    // $USERNAME = "changedValue";
+    // echo $USERNAME;
+    // echo "<br>";
+    // echo USERNAME;
+
+    // const EMAIL = "john@mail.test";
+    // echo "<br>";
+    // echo EMAIL;
+
+    // echo "<br>";
+    // echo __DIR__ . "/payroll.pdf";
+
 
 ?>
 
