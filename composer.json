@@ -1,0 +1,9 @@
+{
+    "name": "dannielibor/php-mysql-training",
+    "autoload": {
+        "psr-4": {
+            "Dannielibor\\PhpMysqlTraining\\": "/"
+        }
+    },
+    "require": {}
+}
