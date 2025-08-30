@@ -16,9 +16,7 @@ $errors = [];
 $user = $_SESSION["user"];
 
 if ($user["email"] === $email && $user["password"] === $password) {
-    // proceed login...
-    session_unset();
-    session_destroy();
+    header("Location: /php-mysql-training/profile.php");
 } else {
     $errors["email"] = "Invalid credentials";
 
