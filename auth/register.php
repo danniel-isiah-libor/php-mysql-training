@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: /signin.php");
+    header("Location: /php-mysql-training/signin.php");
     exit();
 }
 
@@ -56,7 +56,7 @@ if (!isset($password)) {
 if (!empty($errors)) {
     $_SESSION['errors'] = $errors;
 
-    header("Location: /signup.php");
+    header("Location: /php-mysql-training/signup.php");
     die();
 }
 
@@ -66,5 +66,5 @@ $_SESSION["user"] = $form;
 // session_unset();
 // session_destroy();
 
-header("Location: /signin.php");
+header("Location: /php-mysql-training/signin.php");
 die();

@@ -14,7 +14,7 @@ if (isset($_SESSION['user'])) {
     // authenticated
 } else {
     // unauthenticated
-    header("Location: /signin.php");
+    header("Location: /php-mysql-training/signin.php");
     exit();
 }
 ?>
