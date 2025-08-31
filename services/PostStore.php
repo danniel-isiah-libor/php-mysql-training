@@ -3,11 +3,15 @@
 namespace services;
 
 include_once "../helpers/FormFilter.php";
+include_once "../auth/traits/Database.php";
 
 use helpers\FormFilter;
+use auth\traits\Database;
 
 class PostStore extends FormFilter
 {
+    use Database;
+
     private $form;
     private $errors = [];
 
@@ -25,6 +29,8 @@ class PostStore extends FormFilter
         $this->form = $this->filterData($this->form);
 
         $this->validateData();
+
+        $this->performQuery();
 
         // save to database...
     }
