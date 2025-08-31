@@ -18,7 +18,7 @@
             <h2 class="text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">Create Post</h2>
             <p class="mt-2 text-lg/8 text-gray-400">Aute magna irure deserunt veniam aliqua magna enim voluptate.</p>
         </div>
-        <form action="/php-mysql-training/services/posts/Store.php" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
+        <form action="/php-mysql-training/services/PostStore.php" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
             <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div class="sm:col-span-2">
                     <label for="title" class="block text-sm/6 font-semibold text-white">Title</label>

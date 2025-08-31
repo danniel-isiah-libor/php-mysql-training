@@ -1,8 +1,6 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: /php-mysql-training/signin.php");
-    exit();
-}
+
+namespace auth;
 
 include_once "../auth/RegisterInterface.php";
 include_once "../oop/BaseClass.php";
@@ -13,6 +11,8 @@ class Register extends BaseClass implements RegisterInterface
 
     public function __construct()
     {
+        parent::__construct();
+
         session_start();
 
         $this->form = $_POST; // array

@@ -1,5 +1,7 @@
 <?php
 
+namespace auth;
+
 interface RegisterInterface
 {
     /**
