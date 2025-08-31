@@ -1,19 +1,16 @@
 <?php
-    class Profile
+    include 'User.php';
+    class Profile extends User
     {
+        const TABLE_NAME = "profiles";
         function __construct()
         {
             var_dump("initialization");
         }
 
-        function getUserInfo()
+        protected function performQuery()
         {
-            $data=[
-                "username" => "testuser",
-                "email" => "test@example.com"
-            ];
-
-            return (object) $data;
+            self::TABLE_NAME;
         }
 
         function __destruct()

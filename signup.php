@@ -47,7 +47,7 @@
   </div>
 
   <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-    <form action="/php-mysql-training/auth/register.php" method="POST" class="space-y-6">
+    <form action="/php-mysql-training/auth/Register.php" method="POST" class="space-y-6">
     
       <?php include_once 'username-field.php'; ?>
 

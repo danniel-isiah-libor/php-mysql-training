@@ -143,9 +143,16 @@
     $profile = new Profile();
 
     $data = $profile->getUserInfo();
+    echo "<br>";
+    echo "<br>";
     echo $data->username;
     echo "<br>";
     echo $data->email;
+    echo "<br>";
+    echo "<br>";
+    echo $profile::TABLE_NAME;
+    echo "<br>";
+    echo "<br>";
 ?>
 
 </body>
