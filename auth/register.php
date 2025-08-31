@@ -1,7 +1,8 @@
 <?php
-include_once './services/method-check.php';
+include_once '../services/method-check.php';
+include_once 'RegisterInterface.php';
 
-    class register
+    class Register implements RegisterInterface
     {
         public $form;
         function __construct()
@@ -67,7 +68,7 @@ include_once './services/method-check.php';
             }
             else if ($password !== $confirmpassword)
             {
-                $errors['confirmpassword']='Confirm password does not match';
+                $errors['password']='Confirm password does not match';
             }
 
             if (!empty($errors))
@@ -93,10 +94,4 @@ include_once './services/method-check.php';
 
     $process=new Register();
     $process->register();
-
-    
-
-    
-
-    
 ?>
