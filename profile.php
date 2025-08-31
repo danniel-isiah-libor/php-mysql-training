@@ -10,13 +10,9 @@
 </head>
 
 <?php
-if (isset($_SESSION['user'])) {
-    // authenticated
-} else {
-    // unauthenticated
-    header("Location: /php-mysql-training/signin.php");
-    exit();
-}
+include_once "helpers/Middleware.php";
+
+(new helpers\Middleware())->handle();
 ?>
 
 <body>
@@ -37,6 +33,8 @@ if (isset($_SESSION['user'])) {
 
     <?php
     include_once "./oop/Profile.php";
+
+    use oop\Profile;
 
     $profile = new Profile("this is a parameter");
 

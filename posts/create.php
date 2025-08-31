@@ -9,6 +9,12 @@
     <?php include_once "../dependencies.php"; ?>
 </head>
 
+<?php
+include_once "../helpers/Middleware.php";
+
+(new helpers\Middleware())->handle();
+?>
+
 <body>
     <div class="isolate bg-gray-900 px-6 py-24 sm:py-32 lg:px-8">
         <div aria-hidden="true" class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
