@@ -53,13 +53,19 @@ class Register
 
         // Validate password field
         if (!isset($password)) {
-            $errors['password'] = 'Password is required';
-        } else if (strlen($password) < 8) {
-            $errors['password'] = 'Password must be at least 8 characters long';
-        } else if (strlen($password) > 12) {
-            $errors['password'] = 'Password must not exceed 12 characters';
-        } else if ($password !== $confirmPassword) {
-            $errors['confirmPassword'] = 'Passwords do not match';
+            $errors['password'][] = 'Password is required';
+        }
+
+        if (strlen($password) < 8) {
+            $errors['password'][] = 'Password must be at least 8 characters long';
+        }
+
+        if (strlen($password) > 12) {
+            $errors['password'][] = 'Password must not exceed 12 characters';
+        }
+
+        if ($password !== $confirmPassword) {
+            $errors['password'][] = 'Passwords do not match';
         }
 
         if (!empty($errors)) {
@@ -72,8 +78,8 @@ class Register
         // TODO: save to database
         $_SESSION["user"] = $this->form;
 
-        header("Location: /php-mysql-training/signin.php");
-        die();
+        // header("Location: /php-mysql-training/signin.php");
+        // die();
     }
 }
 

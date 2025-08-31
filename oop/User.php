@@ -1,9 +1,18 @@
 <?php
 
-// include_once "Profile.php";
+include_once "BaseClass.php";
 
-class User // extends Profile
+class User extends BaseClass
 {
+    // public $totalRecords = 1;
+
+    function __construct()
+    {
+        parent::__construct();
+
+        var_dump("this is from user class");
+    }
+
     /**
      * Get user information.
      * 

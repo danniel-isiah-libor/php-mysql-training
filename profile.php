@@ -42,6 +42,8 @@ if (isset($_SESSION['user'])) {
 
     $data = $profile->getUserInfo();
 
+    // new Profile("this is a parameter")::TABLE_NAME;
+
     echo "<br>";
     echo $data->username;
     echo "<br>";
