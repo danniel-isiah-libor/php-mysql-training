@@ -15,10 +15,12 @@ abstract class BaseClass
             exit();
         }
 
-        $serverName = "localhost";
-        $username = "root";
-        $password = "";
-        $databaseName = "blog_app";
+        $env = parse_ini_file('../.env');
+
+        $serverName = $env["DB_SERVER_NAME"];
+        $username = $env["DB_USERNAME"];
+        $password = $env["DB_PASSWORD"];
+        $databaseName = $env["DB_NAME"];
 
         $this->mysql = new mysqli($serverName, $username, $password, $databaseName);
 
