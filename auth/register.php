@@ -4,7 +4,10 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     exit();
 }
 
-class Register
+include_once "../auth/RegisterInterface.php";
+include_once "../oop/BaseClass.php";
+
+class Register extends BaseClass implements RegisterInterface
 {
     private $form;
 
@@ -75,11 +78,15 @@ class Register
             die();
         }
 
-        // TODO: save to database
-        $_SESSION["user"] = $this->form;
+        // logic here.....
 
-        // header("Location: /php-mysql-training/signin.php");
-        // die();
+        // TODO: save to database
+        $_SESSION["user"] = $this->form; // temp
+
+        // login logic here....
+
+        header("Location: /php-mysql-training/signin.php");
+        die();
     }
 }
 

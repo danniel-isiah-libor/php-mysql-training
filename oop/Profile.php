@@ -1,9 +1,19 @@
 <?php
 
+namespace oop;
+
 include_once "User.php";
+include_once "../oop/traits/Database.php";
+include_once "../auth/traits/Database.php";
+
+use oop\User;
+use oop\traits\Database;
+use auth\traits\Database as AuthDatabase;
+
 class Profile extends User
 {
-    const TABLE_NAME = "profiles";
+    use Database;
+    use AuthDatabase;
 
     // public $totalRecords = 2;
 
@@ -26,15 +36,6 @@ class Profile extends User
         echo "<br>";
     }
 
-    protected function performQuery()
-    {
-        // performing database query...
-
-        self::TABLE_NAME;
-
-        return $this;
-    }
-
     function __destruct()
     {
         echo "<br>";
@@ -46,6 +47,8 @@ class Profile extends User
         $data = parent::getUserInfo();
 
         // additional logic here....
+
+        $this->performQuery();
 
         return $data;
     }

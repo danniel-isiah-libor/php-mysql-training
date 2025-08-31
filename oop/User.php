@@ -1,6 +1,10 @@
 <?php
 
+namespace oop;
+
 include_once "BaseClass.php";
+
+use oop\BaseClass;
 
 class User extends BaseClass
 {

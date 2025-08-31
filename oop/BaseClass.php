@@ -1,6 +1,12 @@
 <?php
 
-abstract class BaseClass
+namespace oop;
+
+include_once "../auth/BaseClass.php";
+
+use auth\BaseClass as AuthBaseClass;
+
+abstract class BaseClass extends AuthBaseClass
 {
     public $totalRecords = 0;
 
