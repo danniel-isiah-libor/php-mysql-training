@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
+use Spatie\Browsershot\Browsershot;
+use function Spatie\LaravelPdf\Support\pdf;
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,4 +21,12 @@ Route::middleware(['auth'])->group(function () {
     Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
+
+Route::get('/test', function () {
+    // Browsershot::url('https://google.com')->save('example.pdf');
+
+    return pdf()
+        ->view('sample')
+        ->name('invoice.pdf');
+});
