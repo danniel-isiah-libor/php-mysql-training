@@ -1,7 +1,14 @@
 <?php
 
-    include_once '/services/method-check.php';
+    include_once '../services/method-check.php';
+    include_once "../oop/BaseClass.php";
 
+    use oop\BaseClass;
+
+    class Login extends BaseClass
+    {
+        //
+    }
     session_start();
 
     $form = $_POST;
@@ -26,41 +33,28 @@
     $errors=[];
 
     //Validate / Required rule username
-    if (!isset($username))
-    {
-        $errors['username']='Username is required';
-    } else if (strlen($username) > 50)
-    {
-        $errors['username']='Invalid Credentials';
-    }
+    $baseClass = new Login();
 
-    //Validate / Required rule password
-    if (!isset($password))
-    {
-        $errors['username']='Invalid Credentials';
-    } else if (strlen($password) < 6)
-    {
-        $errors['username']='Invalid Credentials';
-    } else if (strlen($password) > 12)
-    {
-        $errors['username']='Invalid Credentials';
-    }
-
-    if (!empty($errors))
-    {
-        $_SESSION['errors']=$errors;
+    $mysql = $baseClass->mysql();
+    
+    $query = "SELECT * FROM users WHERE email = '$email' LIMIT 1";
+    
+    $user = $mysql->query($query)->fetch_assoc();
+    
+    if ($user["email"] === $email && password_verify($password, $user["password"])) {
+        // $user["password"] = null;
+        unset($user["password"]);
+    
+        $_SESSION["user"] = $user;
+    
+        header("Location: /php-mysql-training/profile.php");
+    } else {
+        $errors["email"] = "Invalid credentials";
+    
+        $_SESSION['errors'] = $errors;
+    
         header("Location: /php-mysql-training/signin.php");
-        die();
     }
-
-    //save to database
-    if (!($form['username'] === $_SESSION['loginCreds']['username'] && $form['password'] === $_SESSION['loginCreds']['password']))
-    {
-        header("Location: /php-mysql-training/signin.php");
-        die();
-    }
-    $_SESSION['user']=$_SESSION['loginCreds'];
-    header("Location: /php-mysql-training/profile.php");
     // session_unset();
     // session_destroy();
     die();

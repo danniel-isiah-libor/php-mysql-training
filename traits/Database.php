@@ -17,18 +17,18 @@
             // }
 
             //INSERT QUERY
-            // $password = "jaypee";
-            // $hashedPassword = password_hash($password,PASSWORD_BCRYPT);
+            $password = "asdasd";
+            $hashedPassword = password_hash($password,PASSWORD_BCRYPT);
 
-            // $query = "INSERT INTO users values (null,'jaypee','jaypee@test.com','$hashedPassword')";
-            // $result = $this->mysql->query($query);
-            // var_dump($result);
+            $query = "INSERT INTO users values (null,'resty1','resty@test.com','$hashedPassword')";
+            $result = $this->mysql->query($query);
+            var_dump($result);
             
 
             //UPDATE QUERY
-            $query = "UPDATE users SET email='jasdasd@test.com' WHERE id=2";
-            $result = $this->mysql->query($query);
-            var_dump($result);
+            // $query = "UPDATE users SET email='jasdasd@test.com' WHERE id=2";
+            // $result = $this->mysql->query($query);
+            // var_dump($result);
 
 
             //DELETE QUERY
@@ -38,6 +38,40 @@
 
 
             return $this;
+        }
+
+        protected function addUser($data)
+        {
+            //INSERT QUERY
+            $password = $data["password"];
+            $hashedPassword = password_hash($password,PASSWORD_BCRYPT);
+
+            $sql = "INSERT INTO users (username, email, password) VALUES (:username, :email, :password)";
+            $stmt = $this->mysql->prepare($sql);
+            
+
+            return $stmt->execute([
+                ':name'     => $data['name'],
+                ':email'    => $data['email'],
+                ':password' => $hashedPassword,
+            ]);
+        }
+
+
+        protected function addPost($data)
+        {
+            //INSERT QUERY
+            $sql = "INSERT INTO posts (title, message, created_at, updated_at, user_id) VALUES (:title, :message, :created_at, :updated_at)";
+            $stmt = $this->mysql->prepare($sql);
+            $userId = $_SESSION['user']['id'];
+
+            return $stmt->execute([
+                ':title'     => $data['title'],
+                ':message'    => $data['message'],
+                ':created_at' => 'NOW()',
+                ':updated_at' => 'NOW()',
+                ':user_id' => 1,
+            ]);
         }
 
         public function __destruct()

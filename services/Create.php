@@ -6,7 +6,7 @@
     include_once '../auth/FilterData.php';
     include_once '../traits/Database.php';
     use auth\FilterData;
-use Database;
+    use Database;
 
     class Create extends FilterData
     {
@@ -35,7 +35,10 @@ use Database;
 
             $this->validateData();
 
-            $this->performQuery();
+             $this->performQuery();
+
+            //$this->addPost($this->form);
+
             //save to database
             // var_dump($form);
             // var_dump($errors);

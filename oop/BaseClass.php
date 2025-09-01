@@ -27,6 +27,10 @@ use mysqli;
 
         }
 
+        public function mysql()
+        {
+            return $this->mysql;
+        }
         
     }
 ?>
