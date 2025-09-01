@@ -24,6 +24,8 @@ $post = $postShow->getPost($_GET['id']);
         <div class="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,var(--color-indigo-500),transparent)] opacity-10"></div>
         <div class="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-gray-900 shadow-xl ring-1 shadow-indigo-500/5 ring-white/5 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center"></div>
         <div class="mx-auto max-w-2xl lg:max-w-4xl">
+            <a href="/php-mysql-training/posts/update.php/?id=<?php echo $_GET['id']; ?>" class="justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Edit</a>
+
             <h1 class="text-white align-center justify-center text-center">
                 <?php echo $post['title']; ?>
             </h1>

@@ -28,34 +28,9 @@ class PostStore extends FormFilter
     {
         $this->form = $this->filterData($this->form);
 
-        $this->validateData();
+        $this->validateData($this->form, $this->errors);
 
         $this->performQuery();
-    }
-
-    private function validateData()
-    {
-        // validate form data...
-        if (!isset($this->form['title']) || empty($this->form['title'])) {
-            $this->errors['title'] = 'Title is required.';
-        } else if (strlen($this->form['title']) > 255) {
-            $this->errors['title'] = 'Title must be less than 255 characters.';
-        }
-
-        if (!isset($this->form['body']) || empty($this->form['body'])) {
-            $this->errors['body'] = 'Body is required.';
-        } else if (strlen($this->form['body']) > 3000) {
-            $this->errors['body'] = 'Body must be less than 3000 characters.';
-        }
-
-        if (!empty($this->errors)) {
-            $_SESSION['errors'] = $this->errors;
-
-            header("Location: /php-mysql-training/posts/create.php");
-            exit(); // die();
-        }
-
-        return $this;
     }
 
     protected function performQuery()
