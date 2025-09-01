@@ -14,7 +14,7 @@ include_once "../helpers/Middleware.php";
 
 (new helpers\Middleware())->handle();
 
-$action = "/php-mysql-training/services/PostStore.php";
+$action = "/php-mysql-training/services/PostUpdate.php";
 ?>
 
 <body>
