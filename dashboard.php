@@ -35,11 +35,11 @@ $posts = $post->getPosts();
                             <time datetime="2020-03-16" class="text-gray-400">
                                 <?php echo $post['updated_at']; ?>
                             </time>
-                            <a href="#" class="relative z-10 rounded-full bg-gray-800/60 px-3 py-1.5 font-medium text-gray-300 hover:bg-gray-800">Marketing</a>
+                            <a href="/php-mysql-training/posts/show.php/?id=<?php echo $post['post_id']; ?>" class="relative z-10 rounded-full bg-gray-800/60 px-3 py-1.5 font-medium text-gray-300 hover:bg-gray-800">Marketing</a>
                         </div>
                         <div class="group relative grow">
                             <h3 class="mt-3 text-lg/6 font-semibold text-white group-hover:text-gray-300">
-                                <a href="#">
+                                <a href="/php-mysql-training/posts/show.php/?id=<?php echo $post['post_id']; ?>">
                                     <span class="absolute inset-0"></span>
                                     <?php echo $post['title']; ?>
                                 </a>

@@ -15,7 +15,7 @@ class PostList extends BaseClass
     {
         $posts = [];
 
-        $query = "SELECT * FROM posts INNER JOIN users ON users.id = posts.user_id";
+        $query = "SELECT posts.id as post_id, users.*, posts.* FROM `posts` LEFT JOIN users ON users.id = posts.user_id GROUP BY posts.id";
 
         $results = $this->mysql->query($query);
 
