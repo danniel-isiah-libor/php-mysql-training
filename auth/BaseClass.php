@@ -15,7 +15,12 @@ abstract class BaseClass
             exit();
         }
 
-        $env = parse_ini_file('../.env');
+        $this->connectDatabase();
+    }
+
+    protected function connectDatabase($env = null)
+    {
+        $env = $env ?? parse_ini_file('../.env');
 
         $serverName = $env["DB_SERVER_NAME"];
         $username = $env["DB_USERNAME"];
