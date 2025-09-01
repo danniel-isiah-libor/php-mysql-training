@@ -33,4 +33,9 @@ abstract class BaseClass
     {
         $this->mysql->close();
     }
+
+    public function mysql()
+    {
+        return $this->mysql;
+    }
 }

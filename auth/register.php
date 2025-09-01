@@ -80,8 +80,12 @@ class Register extends BaseClass implements RegisterInterface
 
         // logic here.....
 
-        // TODO: save to database
-        $_SESSION["user"] = $this->form; // temp
+        $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+
+        $query = "INSERT INTO users (full_name, email, password)
+        VALUES ('$fullName', '$email', '$hashedPassword')";
+
+        $this->mysql->query($query);
 
         // login logic here....
 
