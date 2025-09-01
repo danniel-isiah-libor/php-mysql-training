@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const backend = async () => {
+            const response = await fetch('http://localhost/php-mysql-training/api.php', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: {
+                    //
+                }
+            });
+
+            console.log(response);
+
+            document.body.innerHTML = await response.text();
+        }
+
+        backend();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+{
+    "name": "dannielibor/php-mysql-training",
+    "description": "php training playground",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Danniel Libor",
+            "email": "dlibor.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "mpdf/mpdf": "^8.2"
+    }
+}
